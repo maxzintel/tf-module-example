@@ -24,4 +24,4 @@
       └─main.tf
 ```
 
-Note: I just did examples of both methods because I have historically only used method 2 and not taken advantage of tfvars.
+Note: View method 2 as just a comparison of using exclusively variables.tf and the drawbacks therein.
