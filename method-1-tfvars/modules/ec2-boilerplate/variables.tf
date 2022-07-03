@@ -41,3 +41,9 @@ variable "subnet" {
   type = string
   description = "The subnet to put the instance inside."
 }
+
+variable "az" {
+  type = string
+  description = "The availability zone the instance should live in."
+  default = "eu-west-1a"
+}
