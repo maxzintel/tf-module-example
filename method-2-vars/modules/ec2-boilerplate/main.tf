@@ -25,8 +25,8 @@ resource "aws_instance" "ipfs" {
   associate_public_ip_address = false
   instance_type               = "${var.instance_type}"
   key_name                    = "${var.key_name}"
-  availability_zone           = "eu-west-1a"
-  vpc_security_group_ids      = [aws_security_group.sg-ipfs.arn]
+  availability_zone           = "${var.az}"
+  vpc_security_group_ids      = [aws_security_group.sg-ipfs.id]
   subnet_id                   = "${var.subnet}"
 
   tags = {
