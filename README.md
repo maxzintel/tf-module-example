@@ -14,6 +14,7 @@
       ├─main.tf
       └─prod.tfvars
 
+# Optional, can ignore.
 -method-2-vars
   ├─modules/ec2-boilerplate
   |   ├─main.tf
