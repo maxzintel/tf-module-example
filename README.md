@@ -1,4 +1,6 @@
-# Testing Terraform Methods - Variables vs. TFVARS
+# Testing Terraform Methods
+
+Example Module comparing use of tfvars & variables
 
 ## Directory Structure
 
