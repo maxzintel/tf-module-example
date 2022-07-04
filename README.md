@@ -7,20 +7,15 @@
   ├─modules/ec2-boilerplate
   |   ├─main.tf
   |   └─variables.tf
-  ├─dev
-  |   ├─main.tf
-  |   └─dev.tfvars
   └─prod
       ├─main.tf
-      └─prod.tfvars
+      └─terraform.tfvars // Set defaults through the prod env.
 
 # Optional, can ignore.
 -method-2-vars
   ├─modules/ec2-boilerplate
   |   ├─main.tf
   |   └─variables.tf
-  ├─dev
-  |   └─main.tf
   └─prod
       └─main.tf
 ```
