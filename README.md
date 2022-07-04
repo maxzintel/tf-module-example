@@ -26,7 +26,7 @@ Note: View method 2 as just a comparison of using exclusively variables.tf and t
 
 ## Nav
 
-1. [S3 Backend State](https://github.com/s1dequest/tf-module-example/blob/d10c4a787abad928e78ed5843ea013118e3b78bb/)method-1-tfvars/prod/main.tf#L1
+1. [S3 Backend State](https://github.com/s1dequest/tf-module-example/blob/d10c4a787abad928e78ed5843ea013118e3b78bb/method-1-tfvars/prod/main.tf#L1)
 2. [tfvars File](https://github.com/s1dequest/tf-module-example/blob/master/method-1-tfvars/prod/terraform.tfvars)
 3. [Security Group](https://github.com/s1dequest/tf-module-example/blob/d10c4a787abad928e78ed5843ea013118e3b78bb/method-1-tfvars/modules/ec2-boilerplate/main.tf#L22)
 4. [EBS Volume Attachment](https://github.com/s1dequest/tf-module-example/blob/d10c4a787abad928e78ed5843ea013118e3b78bb/method-1-tfvars/modules/ec2-boilerplate/main.tf#L66)
