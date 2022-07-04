@@ -1,18 +1,3 @@
-variable "env_name" {
-  type = string
-  description = "The name of the environment the module resources are being provisioned for. Relevant values are dev and prod."
-}
-
-variable "aws_profile" {
-  type = string
-  description = "The AWS profile to instantiate the provider. Equivalent to the environment variables AWS_PROFILE or AWS_DEFAULT_PROFILE if this variable is not set."
-}
-
-variable "account_number" {
-  type = string
-  description = "The AWS Account Number associated with the environment we are deploying to. Assumes dev and prod are in isolated AWS accounts and thus would have different values. Relevant values are 123 (dev) and 789 (prod)."
-}
-
 # The instance size may be different from env to env. For example, in the dev environment we may want to save some money by making the instances a cheaper class or smaller size (though the preference would be cheaper class and same base resource allocation). One case would be m5 instances in prod and t3 instances in dev.
 variable "instance_type" {
   type = string

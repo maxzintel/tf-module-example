@@ -1,37 +1,15 @@
-terraform {
-  backend "s3" {
-    bucket   = "${var.env_name}-infrastructure"
-    key      = "tf/state"
-    region   = "eu-west-1"
-    role_arn = "arn:aws:iam::${var.account_number}:role/TerraformStateManager"
-    # Above role needs:
-    # s3:ListBucket on arn:aws:s3:::${env_name}-infrastructure
-    # s3:GetObject on arn:aws:s3:::${env_name}-infrastructure/tf/state
-    # s3:PutObject on arn:aws:s3:::${env_name}-infrastructure/tf/state
-    # s3:DeleteObject on arn:aws:s3:::${env_name}-infrastructure/tf/state
-  }
-}
-
-provider "aws" {
-  region  = "eu-west-1"
-  profile = var.aws_profile
-  assume_role {
-    role_arn = "arn:aws:iam::blabla:role/adminrole"
-  }
-}
-
 resource "aws_instance" "ipfs" {
   ami                         = "ami-abcd1234"
   associate_public_ip_address = false
-  instance_type               = "${var.instance_type}"
-  key_name                    = "${var.key_name}"
-  availability_zone           = "${var.az}"
+  instance_type               = var.instance_type
+  key_name                    = var.key_name
+  availability_zone           = var.az
   vpc_security_group_ids      = [aws_security_group.sg-ipfs.id]
-  subnet_id                   = "${var.subnet}"
+  subnet_id                   = var.subnet
 
   tags = {
     Group = "IPFS"
-    Name  = "${var.instance_name}"
+    Name  = var.instance_name
   }
 }
 
