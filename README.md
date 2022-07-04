@@ -9,7 +9,7 @@
   |   └─variables.tf
   └─prod
       ├─main.tf
-      └─terraform.tfvars // Set defaults through the prod env.
+      └─terraform.tfvars # Set defaults through the prod env.
 
 # Optional, can ignore.
 -method-2-vars
